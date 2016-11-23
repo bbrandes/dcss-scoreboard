@@ -180,7 +180,7 @@ def _games_to_table(env: jinja2.environment.Environment,
                         // of two letter class abbreviations, which match the second
                         // two letters of the combo abbreviation (e.g. match "Be" to "MiBe")
                         tokens = tokens.map(function(t) {{
-                            t = "\\\\b" + t + (t.length==2 ? "|\\\\b.."+t+"\\\\b" : "");
+                            t = "\\b" + t + (t.length==2 ? "|\\b.."+t+"\\b" : "");
                             return t;
                         }});
                         // AND tokens together
