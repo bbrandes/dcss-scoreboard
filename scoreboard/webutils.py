@@ -184,7 +184,7 @@ def _games_to_table(env: jinja2.environment.Environment,
                             return t;
                         }});
                         // AND tokens together
-                        var regex = "(?=" + tokens.join(")(?=") + ")";
+                        var regex = "(?=.*" + tokens.join(")(?=.*") + ")";
                         table = $('#{id}').DataTable();
                         table.search(regex, true, false);
                         table.draw();
